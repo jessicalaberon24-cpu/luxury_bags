@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Alonzo Luxury Bags 👜</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Alonzo Luxury Bags 👜
+        </div>
+
+        <nav>
+
+            <button onclick="showSection('products')">
+                Products
+            </button>
+
+            <button onclick="showSection('cart')">
+                Cart
+                <span id="cartCount">0</span>
+            </button>
+
+            <button onclick="showSection('orders')">
+                My Orders
+            </button>
+
+            <button
+                id="loginNav"
+                onclick="showSection('login')"
+            >
+                Login
+            </button>
+
+            <button
+                id="logoutNav"
+                onclick="logout()"
+                style="display:none;"
+            >
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         HOME / PRODUCTS
+    ====================================== -->
+
+    <main>
+
+        <section
+            id="products"
+            class="section active"
+        >
+
+            <div class="hero">
+
+                <h1>
+                    Alonzo Luxury Bags 👜
+                </h1>
+
+                <p>
+                    Elegant bags for your
+                    sophisticated style.
+                </p>
+
+            </div>
+
+            <h2>
+                Luxury Collection
+            </h2>
+
+            <div
+                id="productsContainer"
+                class="products-container"
+            >
+                <!-- Products loaded by script.js -->
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PRODUCT VIEW
+        ================================== -->
+
+        <section
+            id="productView"
+            class="section"
+        >
+
+            <div
+                id="productDetails"
+                class="product-details"
+            >
+                <!-- Product details loaded by script.js -->
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             LOGIN
+        ================================== -->
+
+        <section
+            id="login"
+            class="section auth-section"
+        >
+
+            <div class="auth-box">
+
+                <h2>
+                    Login
+                </h2>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                >
+
+                <button
+                    onclick="login()"
+                >
+                    Login
+                </button>
+
+                <p>
+                    Don't have an account?
+                    <button
+                        class="text-button"
+                        onclick="showSection('register')"
+                    >
+                        Sign Up
+                    </button>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             REGISTER
+        ================================== -->
+
+        <section
+            id="register"
+            class="section auth-section"
+        >
+
+            <div class="auth-box">
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Full Name"
+                >
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Email"
+                >
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Password"
+                >
+
+                <button
+                    onclick="register()"
+                >
+                    Sign Up
+                </button>
+
+                <p>
+                    Already have an account?
+
+                    <button
+                        class="text-button"
+                        onclick="showSection('login')"
+                    >
+                        Login
+                    </button>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             CART
+        ================================== -->
+
+        <section
+            id="cart"
+            class="section"
+        >
+
+            <h2>
+                Your Shopping Cart
+            </h2>
+
+            <div
+                id="cartContainer"
+                class="cart-container"
+            >
+                <!-- Cart loaded by script.js -->
+            </div>
+
+            <div
+                id="cartTotal"
+                class="cart-total"
+            >
+            </div>
+
+            <button
+                class="checkout-button"
+                onclick="checkout()"
+            >
+                Proceed to Checkout
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             ORDERS
+        ================================== -->
+
+        <section
+            id="orders"
+            class="section"
+        >
+
+            <h2>
+                My Orders
+            </h2>
+
+            <div
+                id="ordersContainer"
+                class="orders-container"
+            >
+                <!-- Orders loaded by script.js -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         PAYMENT MODAL
+    ====================================== -->
+
+    <div
+        id="paymentModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closePaymentModal()"
+            >
+                ×
+            </button>
+
+            <h2>
+                Choose Payment Method
+            </h2>
+
+            <p>
+                Select your preferred payment
+                method.
+            </p>
+
+            <button
+                class="payment-button maya"
+                onclick="payWithMaya()"
+            >
+                Pay with Maya
+            </button>
+
+            <button
+                class="payment-button cod"
+                onclick="payWithCOD()"
+            >
+                Cash on Delivery
+            </button>
+
+            <button
+                class="cancel-button"
+                onclick="closePaymentModal()"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         SCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

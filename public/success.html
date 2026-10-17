@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Successful - Alonzo Luxury Bags 👜</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.30),
+                    rgba(0, 0, 0, 0.30)
+                ),
+                url("images/background.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            padding: 20px;
+        }
+
+        .success-box {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.78);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+
+            padding: 40px 25px;
+
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.35);
+        }
+
+        .check {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: white;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 13px 25px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #d4af37;
+            color: #000;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="success-box">
+
+        <div class="check">✓</div>
+
+        <h1>Payment Successful!</h1>
+
+        <p>
+            Your payment has been successfully completed.
+        </p>
+
+        <p>
+            Thank you for shopping at
+            <strong>Alonzo Luxury Bags 👜</strong>
+        </p>
+
+        <button onclick="goHome()">
+            Continue Shopping
+        </button>
+
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = "/?payment=success";
+        }
+    </script>
+
+</body>
+</html>
